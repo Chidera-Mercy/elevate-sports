@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+body {
+  background-image: url('images/body-bg.png'); /* Background image */
+  background-size: cover; /* Cover the entire viewport */
+  background-attachment: fixed; /* Keep the background fixed while scrolling */
+  min-height: 100vh; /* Ensure it takes up at least full height */
+  margin: 0; /* Remove default margin */
+}
+
+.oswald-regular {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.navbar {
+  background-color: #ad3537;
+  display: flex;
+  flex-wrap: wrap; /* Enable wrapping on smaller screens */
+  align-items: center;
+  padding: 20px 25px;
+  gap: 10rem;
+}
+
+.ashesi-logo {
+  max-height: 60px; 
+  height: auto;
+  width: auto; 
+}
+
+.header-links {
+  display: flex;
+  gap: 5rem; /* Reduce gap between buttons for better responsiveness */
+  justify-content: space-between;
+  flex-wrap: wrap; /* Make buttons wrap on smaller screens */
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+
+button:hover {
+  color: grey;
+}
+
+.shop {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Adjust gap for better spacing */
+  font-size: 1.2rem;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 15px; /* Reduce padding on smaller screens */
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+    gap: 1rem;
+  }
+
+  .header-links {
+    width: 100%; /* Make header links take full width */
+    justify-content: center;
+    gap: 1rem; /* Adjust gap between buttons */
+    order: 2; /* Move links below the logo */
+  }
+
+  button {
+    font-size: 1.2rem; /* Reduce button font size for smaller screens */
+  }
+
+  .shop {
+    width: 100%; /* Make shop button take full width */
+    justify-content: flex-end; /* Align it to the right */
+    order: 1; /* Move shop button above the header links */
+  }
+
+  .ashesi-logo {
+    max-height: 50px; /* Adjust logo size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px; /* Further reduce padding on very small screens */
+  }
+
+  button {
+    font-size: 1rem; /* Further reduce button font size */
+  }
+
+  .shop {
+    font-size: 1rem; /* Adjust shop text size */
+  }
+
+  .ashesi-logo {
+    max-height: 40px; /* Adjust logo size */
+  }
+}
